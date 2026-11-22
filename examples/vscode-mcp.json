@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "lilia": {
+      "type": "http",
+      "url": "https://editor.liliaeditor.com/api/mcp"
+    }
+  }
+}

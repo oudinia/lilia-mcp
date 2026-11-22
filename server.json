@@ -1,0 +1,18 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.liliaeditor/lilia",
+  "description": "Remote MCP server for Lilia Editor: write, check and export structured academic LaTeX documents.",
+  "title": "Lilia",
+  "websiteUrl": "https://liliaeditor.com/mcp/docs",
+  "repository": {
+    "url": "https://github.com/oudinia/lilia-mcp",
+    "source": "github"
+  },
+  "version": "1.0.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://editor.liliaeditor.com/api/mcp"
+    }
+  ]
+}
