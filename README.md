@@ -72,9 +72,9 @@ ChatGPT, Grok, Gemini CLI, Codex and similar apps that accept a remote MCP URL u
 
 ## Tools
 
-The server currently exposes **33 tools** (14 read-only, 19 that write; three of the writes are marked destructive and can be undone). Every tool has a title and a read-only or destructive hint. Names and summaries below follow the live connector catalog.
+The server currently exposes **36 tools** (16 read-only, 20 that write; three of the writes are marked destructive and can be undone). Every tool has a title and a read-only or destructive hint. Names and summaries below follow the live connector catalog.
 
-There is no `whoami` tool yet. The connection is always the signed-in user.
+The connection is always the signed-in user; `whoami` says which account and plan that is.
 
 ### Find and read
 
@@ -89,7 +89,10 @@ There is no `whoami` tool yet. The connection is always the signed-in user.
 | `get_document_settings` | Page setup: paper, orientation, margins, columns, font, spacing, header, footer and custom preamble. |
 | `list_versions` | Saved versions (History), newest first. |
 | `list_comments` | Comments on a document, as the editor’s Comments panel shows them. |
+| `whoami` | Which account the app is signed in with: the plan, the connector actions left today, the month’s limits, and a link to plans and prices. Never the full email or internal ids. |
 | `import_status` | Where an import started with `start_import`, or a PDF or image sent to `import_document`, currently stands. |
+| `start_bulk_import` | Convert many PDFs at once (scanned notebooks, up to 50), each into its own document, in the background: send up to 5 per call, or get the link to the bulk drop page. |
+| `bulk_import_status` | Where a bulk import stands: pages read per file, warnings to check, and each document when it is done. |
 | `check_document` | Compile the document with Lilia’s TeX engine and report whether it compiles and prints correctly, with errors and warnings by block. |
 | `export_document` | A short-lived download link for PDF, a single `.tex`, an Overleaf-style zip, or Word. |
 | `search_help` | Search Lilia’s help articles. |

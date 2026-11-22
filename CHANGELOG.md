@@ -4,6 +4,8 @@ All notable changes to this documentation repository are listed here. The hosted
 
 ## Unreleased
 
+- `whoami`, `start_bulk_import` and `bulk_import_status` added. 36 tools.
+
 - Tool names in plain words: `add_section` added; `apply_lml` is now `rewrite_document` (LaTeX); `get_lilia_latex` is now `get_latex`. 33 tools.
 
 - Initial documentation package for a public, docs-only repository.
