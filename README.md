@@ -72,7 +72,7 @@ ChatGPT, Grok, Gemini CLI, Codex and similar apps that accept a remote MCP URL u
 
 ## Tools
 
-The server currently exposes **32 tools** (14 read-only, 18 that write; three of the writes are marked destructive and can be undone). Every tool has a title and a read-only or destructive hint. Names and summaries below follow the live connector catalog.
+The server currently exposes **33 tools** (14 read-only, 19 that write; three of the writes are marked destructive and can be undone). Every tool has a title and a read-only or destructive hint. Names and summaries below follow the live connector catalog.
 
 There is no `whoami` tool yet. The connection is always the signed-in user.
 
@@ -82,10 +82,10 @@ There is no `whoami` tool yet. The connection is always the signed-in user.
 | --- | --- |
 | `list_documents` | List the author’s documents (owned and shared), most recently changed first. |
 | `get_outline` | A document’s title, kind and class, heading outline, and every block in order as id, type and snippet. Call this first; other tools use these block ids. |
-| `get_document` | The whole document in order: each block’s id, type and content. Long documents are paged. For the LaTeX, use `get_lilia_latex`. |
+| `get_document` | The whole document in order: each block’s id, type and content. Long documents are paged. For the LaTeX, use `get_latex`. |
 | `get_block` | One block’s full type and content by id. |
 | `search_document` | Find text in one document; returns matching blocks. |
-| `get_lilia_latex` | The LaTeX Lilia’s emitter produces for one block or the whole document (what actually compiles here). |
+| `get_latex` | The LaTeX Lilia’s emitter produces for one block or the whole document (what actually compiles here). |
 | `get_document_settings` | Page setup: paper, orientation, margins, columns, font, spacing, header, footer and custom preamble. |
 | `list_versions` | Saved versions (History), newest first. |
 | `list_comments` | Comments on a document, as the editor’s Comments panel shows them. |
@@ -99,13 +99,14 @@ There is no `whoami` tool yet. The connection is always the signed-in user.
 
 | Tool | What it does |
 | --- | --- |
-| `create_document` | Create a new document (article, report or book), optionally with a first draft. |
-| `add_block` | Add a block (paragraph, heading, equation, theorem, list, table, figure, TikZ, code, and other types the editor supports). |
+| `create_document` | Create a new document (article, report or book), optionally with a first draft in LaTeX. |
+| `add_block` | Insert content: a paragraph, equation, list, table, figure, theorem, quote, code, or any other block the editor supports. |
+| `add_section` | Add a section, subsection or subsubsection heading. |
 | `edit_block` | Replace one block’s content (and optionally its type) by id. |
 | `paste_content` | Paste LaTeX, Markdown, plain text or Lilia text into a document, then check that it still compiles. |
 | `reorder_blocks` | Put the document’s blocks in a given order. |
 | `remove_block` | Delete one block by id (destructive; can be undone). |
-| `apply_lml` | Advanced: replace the whole document body in one step, in Lilia’s internal block markup (destructive; can be undone). To write from LaTeX, use `paste_content`; for small changes, `edit_block`. |
+| `rewrite_document` | Replace the whole document body in one step from LaTeX (destructive; can be undone). For a section, use `paste_content`; for small changes, `edit_block`. |
 | `set_title` | Set the title, and optionally authors, date, keywords and venue-specific front matter. |
 | `set_document_settings` | Change the page setup. Pass only the fields to change. |
 | `set_venue` | Format the document for a publisher venue in one step (owner only). |
