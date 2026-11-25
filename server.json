@@ -4,6 +4,43 @@
   "description": "Remote MCP server for Lilia Editor: write, check and export structured academic LaTeX documents.",
   "title": "Lilia",
   "websiteUrl": "https://liliaeditor.com/mcp/docs",
+  "icons": [
+    {
+      "src": "https://raw.githubusercontent.com/oudinia/lilia-mcp/main/assets/logo/lilia-logo.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    },
+    {
+      "src": "https://raw.githubusercontent.com/oudinia/lilia-mcp/main/assets/logo/lilia-logo-512.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "512x512"
+      ]
+    },
+    {
+      "src": "https://raw.githubusercontent.com/oudinia/lilia-mcp/main/assets/logo/lilia-logo-256.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "256x256"
+      ]
+    },
+    {
+      "src": "https://raw.githubusercontent.com/oudinia/lilia-mcp/main/assets/logo/lilia-logo-128.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "128x128"
+      ]
+    },
+    {
+      "src": "https://raw.githubusercontent.com/oudinia/lilia-mcp/main/assets/logo/lilia-logo-64.png",
+      "mimeType": "image/png",
+      "sizes": [
+        "64x64"
+      ]
+    }
+  ],
   "repository": {
     "url": "https://github.com/oudinia/lilia-mcp",
     "source": "github"

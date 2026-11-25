@@ -1,3 +1,5 @@
+<img src="assets/logo/lilia-logo-128.png" alt="Lilia" width="64" height="64">
+
 # Lilia Editor — MCP connector
 
 [Lilia Editor](https://liliaeditor.com/) is a collaborative editor for papers, theses and other typeset documents in science and education. Authors work in a structured block editor; underneath, the document is real LaTeX. This repository is **documentation only**. It describes Lilia’s remote MCP server so that Cursor, Claude, ChatGPT and other MCP clients can connect to it.
